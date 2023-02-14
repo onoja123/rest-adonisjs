@@ -107,7 +107,7 @@ router.post("/verify", async (req: Request, res: Response) => {
     }
 
     type = type.toLowerCase();
-    let url = "";
+    let url = ""; 
     //TODO: Set to ENV
     const headers = {
       Authorization: "Bearer test_sk_lh2IcQYj77ZQKffm4vaob205c",
