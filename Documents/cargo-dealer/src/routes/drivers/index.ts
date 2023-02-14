@@ -148,7 +148,7 @@ router.post("/verify", async (req: Request, res: Response) => {
 
     if(response.phone == req.user.phone){
       const userDetails = await Users.findOne({ uid: req.user.uid });
-      // Create a Add For VerificATION SCHEMA 
+      // Create a Add For verificstion schema 
     }
 
 
