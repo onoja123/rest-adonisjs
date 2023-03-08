@@ -21,3 +21,72 @@ export interface IVerification extends Document {
   createdAt: Date;
   updatedAt: Date;
 }
+
+const verification = new Schema<IVerification>(
+  {
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "Users",
+      required: true,
+    },
+    vehicleDetails: {
+      vehicleType: {
+        type: String,
+        required: true
+      },
+      vehicleNumber:{
+        type: String,
+        required: true
+      },
+      vehicleColor: {
+        type: String,
+        required: true
+      }
+
+    },
+    driversImage:{
+      type: String,
+      required: true
+    },
+    driverLicense: {
+      licenseNumber: {
+        type: String,
+        required: true
+      },
+      licenseExpiry: {
+        type: Date,
+        required: true
+      },
+      licenseImage: {
+        type: String,
+        required: true
+      }
+    },
+    documents: {
+      documentName:{
+        type: String,
+        required: true
+      },
+    documentImage:{
+      type: String,
+      required: true
+    }
+    },
+    status: {
+      type: String,
+      required: true
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
+    updatedAt: {
+      type: Date,
+      default: Date.now,
+    }
+
+  }
+)
+
+
+export default model<IVerification>("Verification", verification);

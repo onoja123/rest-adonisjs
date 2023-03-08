@@ -96,3 +96,5 @@ const deposit = new Schema<IDeposit>({
     },
   },
 });
+
+export default model<IDeposit>("Deposit", deposit);
